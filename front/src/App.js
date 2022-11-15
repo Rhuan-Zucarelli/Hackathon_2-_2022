@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./componentes/Navbar";
+import Personagens from "./componentes/Personagens";
 
 function App() {
-  const [character, setCharacters] = useState();
+  const [personagens, setPersonagens] = useState();
 
   const initialUrl = "https://rickandmortyapi.com/api/character";
 
-  const fetchCharacters = (url) => {
-    fetch("url")
+  const fetchPersonagens = (url) => {
+    fetch(url)
       .then((Response) => Response.json())
-      .then((data) => setCharacters(data.results))
+      .then((data) => setPersonagens(data.results))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    fetchCharacters(initialUrl);
+    fetchPersonagens(initialUrl);
   }, []);
 
   return (
@@ -23,7 +24,9 @@ function App() {
       <Navbar brand={"Almanaque Rick and Morty"} 
 
       />
-
+      <div className="container mt-5">
+        <Personagens personagens={personagens}/>
+      </div>
     </>
   );
 }
