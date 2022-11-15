@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./componentes/Navbar";
 import Personagens from "./componentes/Personagens";
+import Paginacao from "./componentes/Paginacao";
 
 function App() {
   const [personagens, setPersonagens] = useState();
+  const [info, setInfo] = useState({});
 
   const initialUrl = "https://rickandmortyapi.com/api/character";
 
   const fetchPersonagens = (url) => {
     fetch(url)
       .then((Response) => Response.json())
-      .then((data) => setPersonagens(data.results))
+      .then((data) => {
+        setPersonagens(data.results);
+        setInfo(data.info);
+      })
       .catch((error) => console.log(error));
+  };
+
+  const onAnterior = () => {
+    fetchPersonagens(info.prev);
+  };
+
+  const onProximo = () => {
+    fetchPersonagens(info.next);
   };
 
   useEffect(() => {
@@ -21,11 +34,27 @@ function App() {
   return (
     <>
       {/* Barra de navegação */}
-      <Navbar brand={"Almanaque Rick and Morty"} 
+      <Navbar brand={"Almanaque Rick and Morty"} />
 
-      />
       <div className="container mt-5">
-        <Personagens personagens={personagens}/>
+        {/* Navegação das paginas */}
+        <Paginacao
+          prev={info.prev}
+          next={info.next}
+          onAnterior={onAnterior}
+          onProximo={onProximo}
+        />
+
+        {/* Cards dos personagens */}
+        <Personagens personagens={personagens} />
+
+        {/* Navegação das paginas */}
+        <Paginacao 
+          prev={info.prev}
+          next={info.next}
+          onAnterior={onAnterior}
+          onProximo={onProximo}
+        />
       </div>
     </>
   );
