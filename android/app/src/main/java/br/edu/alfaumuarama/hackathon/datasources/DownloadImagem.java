@@ -34,4 +34,11 @@ public class DownloadImagem extends AsyncTask<String, Void, Bitmap> {
 
         return bitmap;
     }
+
+    @Override
+    protected void onPostExecute(Bitmap bitmap) {
+        super.onPostExecute(bitmap);
+
+        imagem.setImageBitmap(bitmap);
+    }
 }
