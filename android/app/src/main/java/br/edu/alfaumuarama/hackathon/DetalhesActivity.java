@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.edu.alfaumuarama.hackathon.datasources.DownloadImagem;
+
 public class DetalhesActivity extends AppCompatActivity {
 
     TextView nome;
