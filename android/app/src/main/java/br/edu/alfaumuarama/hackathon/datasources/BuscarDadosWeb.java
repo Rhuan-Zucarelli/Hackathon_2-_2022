@@ -1,6 +1,10 @@
 package br.edu.alfaumuarama.hackathon.datasources;
 
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -54,7 +58,7 @@ public class BuscarDadosWeb extends
                 HashMap<String, String> mapaDados = new HashMap<>();
                 mapaDados.put("nome", item.getString("name"));
                 mapaDados.put("url", item.getString("url"));
-                mapaDados.put("imagem", Config.linkImagem + i + ".png");
+                mapaDados.put("imagem", Config.linkImagem + i + ".jpeg");
 
                 listaDados.add(mapaDados);
             }

@@ -1,8 +1,11 @@
 package br.edu.alfaumuarama.hackathon;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -39,5 +42,23 @@ public class MainActivity extends ListActivity {
         );
 
         setListAdapter(adapter);
+    }
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+
+        HashMap<String, String> personagem =  listaDados.get(position);
+
+        Intent telaDetalhes = new Intent(MainActivity.this, DetalhesActivity.class);
+
+        Bundle params = new Bundle();
+        params.putString("name", personagem.get("name"));
+        params.putString("species", personagem.get("species"));
+        params.putString("location", personagem.get("location"));
+        params.putString("imagem", personagem.get("imagem"));
+
+        telaDetalhes.putExtras(params);
+
+        startActivity(telaDetalhes);
     }
 }
