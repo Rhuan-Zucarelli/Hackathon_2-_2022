@@ -35,37 +35,33 @@ public class MainActivity extends ListActivity {
         String texto = listaDados.get(0).get("nome");
         Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
 
-        //criando o adapter que ir configrar como os dados sao carregados
         ListAdapter adapter = new SimpleAdapter(
-                this,                      //contexto que o onjeto esta
-                listaDados,                //local onde estao os dados
-                R.layout.listview_modelo,  //item que servira de modelo para cada celula
-                new String[] { "nome" },   //quais campos dos dados serao carregados
-                new int[] { R.id.txtNome } //objetos de tela onde dados vao ser carregados
+                this,
+                listaDados,
+                R.layout.listview_modelo,
+                new String[] { "nome" },
+                new int[] { R.id.txtNome }
         );
 
-        //adicionando o adaptador criado na listView da tela
         setListAdapter(adapter);
     }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        //carregando os dados do item selecionado na lista pelo index
-        HashMap<String, String> pokebola =  listaDados.get(position);
 
-        //criando o caminho para abrir a tela de detalhes
+        HashMap<String, String> c137 =  listaDados.get(position);
+
         Intent telaDetalhes = new Intent(MainActivity.this, DetalhesActivity.class);
 
-        //criando os parametros e adicionando os dados do item selecionado
         Bundle params = new Bundle();
-        params.putString("nome", pokebola.get("nome"));
-        params.putString("imagem", pokebola.get("imagem"));
+        params.putString("nome", c137.get("nome"));
+        params.putString("species", c137.get("species"));
+        params.putString("status", c137.get("status"));
+        params.putString("imagem", c137.get("imagem"));
 
-        //adicionando os parametros no caminho de tela
         telaDetalhes.putExtras(params);
 
-        //abrindo a tela detalhes
         startActivity(telaDetalhes);
     }
 }

@@ -12,6 +12,8 @@ import br.edu.alfaumuarama.hackathon.datasources.DownloadImagem;
 public class DetalhesActivity extends AppCompatActivity {
 
     TextView nome;
+    TextView species;
+    TextView status;
     ImageView imagem;
 
     @Override
@@ -20,19 +22,21 @@ public class DetalhesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes);
 
         nome = findViewById(R.id.nome);
-        imagem = findViewById(R.id.imagem);
+        species = findViewById(R.id.species);
+        status = findViewById(R.id.status);
+        imagem = findViewById(R.id.imageView);
 
-        //capturando o caminho de tela utilizado para abrir esta tela
         Intent dadosRecebidos = getIntent();
         if (dadosRecebidos != null) {
-            //capturando os dados recebidos no caminho de tela
+
             Bundle params = dadosRecebidos.getExtras();
             if (params != null) {
-                //adicionando o nome do pokemon no texto da tela
-                nome.setText(params.getString("nome"));
 
-                //carregando a imagem da web no objeto imagem da tela
-                new DownloadImagem(imagem).execute(params.getString("imagem"));
+                nome.setText(params.getString("nome"));
+                species.setText(params.getString("species"));
+                status.setText(params.getString("status"));
+
+                new DownloadImagem(imagem).execute(params.getString("url"));
             }
         }
     }
