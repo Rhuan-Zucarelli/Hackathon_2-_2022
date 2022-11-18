@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./componentes/Navbar";
-import Personagens from "./componentes/Personagens";
-import Paginacao from "./componentes/Paginacao";
+import Navbar from "./componentes/nav/Navbar";
+import Personagens from "./componentes/cards/Personagens";
+import Paginacao from "./componentes/paginacao/Paginacao";
 
 function App() {
   const [personagens, setPersonagens] = useState();
