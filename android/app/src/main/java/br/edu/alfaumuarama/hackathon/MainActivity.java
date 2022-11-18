@@ -1,5 +1,7 @@
 package br.edu.alfaumuarama.hackathon;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 import br.edu.alfaumuarama.hackathon.datasources.BuscarDadosWeb;
 
@@ -32,33 +35,37 @@ public class MainActivity extends ListActivity {
         String texto = listaDados.get(0).get("nome");
         Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
 
-
+        //criando o adapter que ir configrar como os dados sao carregados
         ListAdapter adapter = new SimpleAdapter(
-            this,
-            listaDados,
-            R.layout.listview_modelo,
-            new String[] { "nome" },
-            new int[] { R.id.txtNome }
+                this,                      //contexto que o onjeto esta
+                listaDados,                //local onde estao os dados
+                R.layout.listview_modelo,  //item que servira de modelo para cada celula
+                new String[] { "nome" },   //quais campos dos dados serao carregados
+                new int[] { R.id.txtNome } //objetos de tela onde dados vao ser carregados
         );
 
+        //adicionando o adaptador criado na listView da tela
         setListAdapter(adapter);
     }
+
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
+        //carregando os dados do item selecionado na lista pelo index
+        HashMap<String, String> pokebola =  listaDados.get(position);
 
-        HashMap<String, String> personagem =  listaDados.get(position);
-
+        //criando o caminho para abrir a tela de detalhes
         Intent telaDetalhes = new Intent(MainActivity.this, DetalhesActivity.class);
 
+        //criando os parametros e adicionando os dados do item selecionado
         Bundle params = new Bundle();
-        params.putString("name", personagem.get("name"));
-        params.putString("species", personagem.get("species"));
-        params.putString("location", personagem.get("location"));
-        params.putString("imagem", personagem.get("imagem"));
+        params.putString("nome", pokebola.get("nome"));
+        params.putString("imagem", pokebola.get("imagem"));
 
+        //adicionando os parametros no caminho de tela
         telaDetalhes.putExtras(params);
 
+        //abrindo a tela detalhes
         startActivity(telaDetalhes);
     }
 }

@@ -22,11 +22,13 @@ public class DownloadImagem extends AsyncTask<String, Void, Bitmap> {
         Bitmap bitmap = null;
 
         try {
-
+            //criando a URL a partir do link recebido
             URL url = new URL(link);
 
+            //buscando os dados da URL e salvando em memoria
             InputStream inputStream = url.openStream();
 
+            //criando um bitmap a partir dos dados salvos em memoria
             bitmap = BitmapFactory.decodeStream(inputStream);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -38,7 +40,7 @@ public class DownloadImagem extends AsyncTask<String, Void, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap bitmap) {
         super.onPostExecute(bitmap);
-
+        //carregando o bitmap baixado acima, no objeto de imagem da tela
         imagem.setImageBitmap(bitmap);
     }
 }
