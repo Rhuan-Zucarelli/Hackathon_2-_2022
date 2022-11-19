@@ -36,7 +36,7 @@ public class DetalhesActivity extends AppCompatActivity {
                 species.setText(params.getString("species"));
                 status.setText(params.getString("status"));
 
-                new DownloadImagem(imagem).execute(params.getString("url"));
+                new DownloadImagem(imagem).execute(params.getString("imagem"));
             }
         }
     }

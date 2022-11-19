@@ -22,7 +22,6 @@ public class DownloadImagem extends AsyncTask<String, Void, Bitmap> {
         Bitmap bitmap = null;
 
         try {
-
             URL url = new URL(link);
 
             InputStream inputStream = url.openStream();
