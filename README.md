@@ -59,7 +59,7 @@ item selecionado na lista pelo index, criando o caminho para abrir a tela de det
 **DownloadImagem:** Ele liga com o imagem view e na public Download ele mapeia criando a URL a partir do link recebido, buscando os dados da URL e salvando em memória, criando um bitmap a partir dos dados salvos em memória 
 depois ele retorna o bitmap baixado acima, no objeto de imagem da tela.
 
-Fora da pasta java tem uma chamada res, dentro dela existe a pasta layout com os seguintes arquivos:
+**Fora da pasta java tem uma chamada res, dentro dela existe a pasta layout com os seguintes arquivos:**
 
 **activity_detalhes.xml:** Com uma pagina responsável por mostrar o nome e a imagem do personagem;
 **activity_main.xml:** Que mostra a lista de personagem;
