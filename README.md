@@ -10,7 +10,7 @@ O projeto consiste em um site desenvolvido em react que exibe uma API contendo d
 essa API também está ligado ao um aplicativo Android que assim como o site também exibe essa mesma lista de personagens 
 com informações de cada um deles.
 
-# **Na Parte de REACT:**
+# **REACT:**
 
 **Para rodar precisa dar um : npm install e depois um npm start**
 
@@ -34,7 +34,7 @@ ela é feita da seguinte maneira, ele é composto pelo:
 **ação:** É a pagina para passar as paginas, como são muitos personagens, não caberia tudo de uma vez;
 **public:**  Renderiza na tela para o publico visualizar;
 
-# **Já a parte de Android:** 
+# **Android:** 
 
 **Para rodar precisa ligar o emulador e mandar rodar, **
 
