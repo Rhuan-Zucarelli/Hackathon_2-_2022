@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class DetalhesActivity extends AppCompatActivity {
     TextView species;
     TextView status;
     ImageView imagem;
+    Button btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class DetalhesActivity extends AppCompatActivity {
         species = findViewById(R.id.species);
         status = findViewById(R.id.status);
         imagem = findViewById(R.id.imageView);
+        btnVoltar = findViewById(R.id.btnVoltar);
 
         Intent dadosRecebidos = getIntent();
         if (dadosRecebidos != null) {
@@ -39,5 +42,7 @@ public class DetalhesActivity extends AppCompatActivity {
                 new DownloadImagem(imagem).execute(params.getString("imagem"));
             }
         }
+
+        btnVoltar.setOnClickListener(view -> onBackPressed());
     }
 }
