@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./componentes/nav/Navbar";
-import Personagens from "./componentes/cards/Personagens";
-import Paginacao from "./componentes/paginacao/Paginacao";
+import Navbar from "./../../componentes/nav";
+import Personagens from "./../../componentes/cards";
+import Paginacao from "./../../componentes/paginacao";
 
-function App() {
+function Home() {
   const [personagens, setPersonagens] = useState();
   const [info, setInfo] = useState({});
 
@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       {/* Barra de navegação */}
-      <Navbar brand={"Almanaque Rick and Morty"} />
+      <Navbar brand={"Almanaque Rick and Morty"} sobre={"Sobre"}/>
 
       <div className="container mt-5">
         {/* Navegação das paginas */}
@@ -60,4 +60,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
