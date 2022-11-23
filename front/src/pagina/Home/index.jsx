@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./../../componentes/nav";
-import Personagens from "./../../componentes/cards";
-import Paginacao from "./../../componentes/paginacao";
+import Navbar from "../../componentes/Nav";
+import Personagens from "../../componentes/Cards";
+import Paginacao from "../../componentes/Paginacao";
+import Footer from "../../componentes/Footer";
 
 function Home() {
   const [personagens, setPersonagens] = useState();
@@ -56,6 +57,10 @@ function Home() {
           onProximo={onProximo}
         />
       </div>
+
+      
+
+     
     </>
   );
 }
