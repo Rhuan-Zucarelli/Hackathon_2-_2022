@@ -52,7 +52,7 @@ ela é feita da seguinte maneira, ele é composto pelo:
 
 # **Android:** 
 
-**Para rodar precisa ligar o emulador e mandar rodar, **
+**Para rodar precisa ligar o emulador e mandar rodar,**
 
 Ele funciona assim: existe uma pasta app, dentro dela a o a pasta java, nela tem  3 com o nome do package, a primeira pasta é a onde está praticamente todo o projeto, contendo: 
 
