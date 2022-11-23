@@ -16,7 +16,7 @@ com informações de cada um deles.
 
 ela é feita da seguinte maneira, ele é composto pelo:
 
-**README.md:** Explica para o projeto o que ele tem que fazer para poder rodar, o que tem que fazer, o que tem que rodar, como vai baixar;
+* **README.md:** Explica para o projeto o que ele tem que fazer para poder rodar, o que tem que fazer, o que tem que rodar, como vai baixar;
 **package.json:** É onde está localizado todas as configurações do react, como irá funcionar, os scripts, o browser;
 **package-lock.json:** É praticamente a mesma coisa que o package.json, só que com algumas extensões a mais como o babel, que é uma extensão de linguagem;
 **node_modules:** contém todas as dependências instaladas para o seu projeto;
