@@ -35,7 +35,7 @@ function Home() {
   return (
     <>
       {/* Barra de navegação */}
-      <Navbar brand={"Almanaque Rick and Morty"} sobre={"Sobre"}/>
+      <Navbar brand={"Almanaque Rick and Morty"} sobre={"Sobre"} />
 
       <div className="container mt-5">
         {/* Navegação das paginas */}
@@ -50,7 +50,7 @@ function Home() {
         <Personagens personagens={personagens} />
 
         {/* Navegação das paginas */}
-        <Paginacao 
+        <Paginacao
           prev={info.prev}
           next={info.next}
           onAnterior={onAnterior}
@@ -58,9 +58,8 @@ function Home() {
         />
       </div>
 
-      
-
-     
+      <Footer
+        name="Desenvolvido por Rhuan e Murilo"/>
     </>
   );
 }

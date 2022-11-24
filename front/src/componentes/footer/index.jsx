@@ -1,10 +1,11 @@
+import React from "react";
 
-const Footer = (fenvolvido) => {
+const Footer = ({ name }) => {
   return (
-    <Footer>
-        <p className="">{fenvolvido} - {new Date().getFullYear()} </p>
-    </Footer>
-  )
-}
+    <footer className="navBar navbar-dark bg-dark">
+      <a className="navbar-brand">{name}</a>
+    </footer>
+  );
+};
 
 export default Footer;
