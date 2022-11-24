@@ -1,8 +1,8 @@
 # Hackathon_2_2022
 Hackathon criado para consumir API's.
 
-Rhuan Zucarelli, RA: 11210 |
-Murilo Trindade, RA: 9055
+Rhuan Zucarelli |
+Murilo Trindade
 
 **O que acontece dentro do projeto:**
 
