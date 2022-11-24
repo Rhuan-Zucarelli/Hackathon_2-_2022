@@ -1,6 +1,7 @@
 import Footer from "../../componentes/Footer";
 import Navbar from "../../componentes/Nav";
-import logo from "./images/logo.png";
+import logo from "../../Images/logo.png";
+
 
 function Sobre() {
   return (
@@ -25,12 +26,21 @@ function Sobre() {
             />
 
             <h3>Para que foi criado :</h3>
-            <p></p>
+            <p>Este site tem o intuito de lhe apresentar todos os personagens que já
+          apareceram durante a serie de Rick and Morty, a serie tem como principal 
+          integrante o Morty que é neto do avô mais inteligente de todas as galaxias 
+          Rick a mente mais brilhante em todo o universo e também o mais niilista de todos. 
+          Eles vivem junto grandes aventuras nas mais diversas realidades possíveis,  
+          totalmente escatológico, nonsense e politicamente incorreto, do jeitinho que
+          a adult swim gosta! wabba lubba dub dub!!!
+          </p>
 
-            <Footer name="Desenvolvido por Rhuan e Murilo"/>
+            
           </div>
-        </div>
+          </div>
+       
       </div>
+      <Footer name="Desenvolvido por Rhuan e Murilo"/> 
     </>
   );
 }
