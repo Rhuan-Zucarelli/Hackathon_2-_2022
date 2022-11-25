@@ -3,14 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/muril/AndroidStudioProjects/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_detalhes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/muril/AndroidStudioProjects/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_home.xml" value="0.203125" />
-        <entry key="..\:/Users/muril/AndroidStudioProjects/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/muril/AndroidStudioProjects/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/listview_modelo.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/muril/Documents/hackathon/Hackathon_2_2022/android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/muril/Documents/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_detalhes.xml" value="0.2" />
-        <entry key="..\:/Users/muril/Documents/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
-        <entry key="..\:/Users/muril/Documents/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/listview_modelo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/muril/AndroidStudioProjects/android/hackathon/app/src/main/res/layout/activity_detalhes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/muril/AndroidStudioProjects/android/hackathon/app/src/main/res/layout/activity_lista.xml" value="0.203125" />
+        <entry key="..\:/Users/muril/AndroidStudioProjects/android/hackathon/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/muril/AndroidStudioProjects/android/hackathon/app/src/main/res/layout/activity_tela2.xml" value="0.25" />
+        <entry key="..\:/Users/muril/AndroidStudioProjects/android/hackathon/app/src/main/res/layout/listview_modelo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/muril/Documents/hackathon/Hackathon_2_2022/android/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
