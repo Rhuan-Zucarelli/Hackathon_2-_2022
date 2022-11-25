@@ -55,7 +55,7 @@ public class BuscarDadosWeb extends
                 mapaDados.put("species", item.getString("species"));
                 mapaDados.put("status", item.getString("status"));
                 mapaDados.put("url", item.getString("url"));
-                mapaDados.put("imagem", Config.linkImagem + (i + 1) + ".jpeg");
+                mapaDados.put("imagem", Config.linkImagem + item.getString("id") + ".jpeg");
 
                 listaDados.add(mapaDados);
             }

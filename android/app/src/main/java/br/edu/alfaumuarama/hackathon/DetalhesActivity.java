@@ -12,9 +12,7 @@ import br.edu.alfaumuarama.hackathon.datasources.DownloadImagem;
 
 public class DetalhesActivity extends AppCompatActivity {
 
-    TextView nome;
-    TextView species;
-    TextView status;
+    TextView nome, species, status;
     ImageView imagem;
     Button btnVoltar;
 
