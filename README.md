@@ -59,7 +59,9 @@ Ele funciona assim: existe uma pasta app, dentro dela a o a pasta java, nela tem
 
 * **Config:** Ele linka a API com o APP;
 
-* **MainActivity:** Nele é listado os dados criando o adaptador que ir configurar como os dados são carregados, contexto que o objeto está, local onde estão os dados, item que servira de modelo para cada célula, quais campos dos dados serão carregados, objetos de tela onde dados vão ser carregados. Também será adiconado o adaptador criado na listView da tela carregando os dados do item selecionado na lista pelo index, criando o caminho para abrir a tela de detalhes, criando os parametros e adicionando os dados do item selecionado, adicionando os parametros no caminho de tela, abrindo a tela detalhes;
+* **MainActivity:** É a pagina home, com um resumo do desenho e com um botão que leva ao Tela2Activity;
+
+* **Tela2Activity:** Nele é listado os dados criando o adaptador que ir configurar como os dados são carregados, contexto que o objeto está, local onde estão os dados, item que servira de modelo para cada célula, quais campos dos dados serão carregados, objetos de tela onde dados vão ser carregados. Também será adiconado o adaptador criado na listView da tela carregando os dados do item selecionado na lista pelo index, criando o caminho para abrir a tela de detalhes, criando os parametros e adicionando os dados do item selecionado, adicionando os parametros no caminho de tela, abrindo a tela detalhes;
 
 * **DetalhesActivity:** Que mostra a imagem e o nome dos personagens capturando o caminho de tela utilizado para abrir esta tela.
 
